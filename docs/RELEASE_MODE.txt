@@ -1,0 +1,3 @@
+KnowVa v1.4 - PRODUCTION
+Backend-ready frontend. No demo role chooser or seed data. Requires a secured KnowVa API and email service.
+Build requires npm install && npm run build.

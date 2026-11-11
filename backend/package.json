@@ -1,0 +1,39 @@
+{
+  "name": "knowva-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "db:init": "node scripts/init-db.js",
+    "admin:create": "node scripts/create-admin.js",
+    "db:migrate-integrity": "node scripts/migrate-integrity.js",
+    "test": "node --test test/*.test.js",
+    "ai:test": "node scripts/test-openai.js",
+    "check": "node --check src/server.js && node --check src/routes.js && node --check src/services.js && node --check src/full-app.js && node --check src/validation.js && node --check src/openai-client.js",
+    "db:migrate-full": "node scripts/migrate-full-app.js",
+    "db:verify": "node scripts/verify-database.js",
+    "db:migrate-groq": "node scripts/migrate-groq.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-pg-simple": "^10.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "helmet": "^8.0.0",
+    "mammoth": "^1.9.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.10.0",
+    "pdf-parse": "^1.1.1",
+    "pg": "^8.13.1",
+    "sharp": "^0.33.5",
+    "zod": "^3.24.2"
+  }
+}
